@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
+
+    public int health;
+
     NavMeshAgent agent;
     public GameObject target;
 
@@ -15,7 +18,7 @@ public class Zombie : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-
+        health = 5;
     }
 
     // Update is called once per frame
