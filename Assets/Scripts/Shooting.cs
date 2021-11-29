@@ -10,6 +10,13 @@ public class Shooting : MonoBehaviour
     bool shootOnCD;
     public GameObject playerCamera;
     public GameObject projectile;
+    public GameObject rifle;
+    public GameObject shotgun;
+    public GameObject pistol;
+    public GameObject previousWeapon;
+    public GameObject projectileSpawn;
+
+
     enum Weapons { Rifle, Shotgun, Pistol};
     Weapons equipped;
 
@@ -17,6 +24,7 @@ public class Shooting : MonoBehaviour
     {
         shootCD = 0f;
         equipped = Weapons.Rifle;
+        previousWeapon = rifle;
     }
 
     // Update is called once per frame
@@ -29,6 +37,15 @@ public class Shooting : MonoBehaviour
         {
             switch(equipped)
             {
+                case Weapons.Rifle:
+                    break;
+
+                case Weapons.Shotgun:
+                    break;
+
+                case Weapons.Pistol:
+                    break;
+
 
             }
 
@@ -39,17 +56,27 @@ public class Shooting : MonoBehaviour
 
         if(Input.GetButtonDown("Weapon1"))
         {
-
+            equipped = Weapons.Rifle;
+            previousWeapon.SetActive(false);
+            previousWeapon = rifle;
+            rifle.SetActive(true);
+            //Debug.Log("Equip rifle");
         }
 
         if (Input.GetButtonDown("Weapon2"))
         {
-
+            equipped = Weapons.Shotgun;
+            previousWeapon.SetActive(false);
+            previousWeapon = shotgun;
+            shotgun.SetActive(true);
         }
 
         if (Input.GetButtonDown("Weapon3"))
         {
-
+            equipped = Weapons.Pistol;
+            previousWeapon.SetActive(false);
+            previousWeapon = pistol;
+            pistol.SetActive(true);
         }
     }
 
