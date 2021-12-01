@@ -25,6 +25,7 @@ public class Shooting : MonoBehaviour
         shootCD = 0f;
         equipped = Weapons.Rifle;
         previousWeapon = rifle;
+        shootOnCD = false;
     }
 
     // Update is called once per frame
@@ -38,6 +39,8 @@ public class Shooting : MonoBehaviour
             switch(equipped)
             {
                 case Weapons.Rifle:
+                    Debug.Log("Apua");
+                    Instantiate(projectile, projectileSpawn.transform.position, Quaternion.identity);
                     break;
 
                 case Weapons.Shotgun:

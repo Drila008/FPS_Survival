@@ -1384,6 +1384,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda8dee6f03b0014a940ca76b70a4ae8, type: 3}
+--- !u!1 &1953814284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8398907794802055673, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+  m_PrefabInstance: {fileID: 4793488377784370491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1954769260562649315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1391,6 +1396,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 645655543, guid: 491c514fb1257804e8cd4bcbb0e3dab5, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1954769261677189481, guid: 491c514fb1257804e8cd4bcbb0e3dab5, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -1448,6 +1457,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1385570563492298610, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889606963628630909, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3823972147294065335, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
@@ -1496,6 +1513,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4546156724274468504, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04058
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546156724274468504, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546156724274468504, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00587
+      objectReference: {fileID: 0}
+    - target: {fileID: 7271943144409855245, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1954769261677189481, guid: 491c514fb1257804e8cd4bcbb0e3dab5, type: 3}
+    - target: {fileID: 7271943144409855245, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
+      propertyPath: projectileSpawn
+      value: 
+      objectReference: {fileID: 1953814284}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ffd30be71ac48c489b0cdf2796e078b, type: 3}
 --- !u!1001 &7751378441418683909
