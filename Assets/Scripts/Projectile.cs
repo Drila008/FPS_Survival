@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed;
+    public float speed = 30f;
     public Rigidbody rb;
 
     [SerializeField]
@@ -14,13 +14,23 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         movement = transform.forward;
+        Destroy(this.gameObject, 5f);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = movement * speed;
+        //rb.velocity = movement * speed;
         
+    }
+
+    private void OnTriggerEnter(Collider other) //If hits a zombie, deal damage
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.GetComponent<Zombie>().TakeDamage();
+            Destroy(this.gameObject);
+        }
     }
 }
